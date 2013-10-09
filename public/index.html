@@ -22,25 +22,22 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-app="nexmo-arduino" ng-controller="DataStuff">
 
-    <div class="container" ng-controller="DataStuff">
+    <div class="container">
 
-      <h1>SMS Light Data</h1>
+      <h1>SMS Light & Temp Data</h1>
       <p>Better than getting a ton of text messages.</p>
 
-      <div ng-repeat="report in data" class="span12">
-        <div class="progress progress-success">
-          <div class="bar" style="width: {{report.value}}"></div>
-        </div>
-      </div>
+      <div id="chart_div" style="height: 500px;"></div>
 
     </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script src="./app.js"></script>
   </body>
 </html>
